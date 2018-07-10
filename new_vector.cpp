@@ -10,15 +10,14 @@ template <class T>
 class Vector
 {
   public:
-    Vector() : _size(0), _capacity(8)
+    Vector() : _size(0), _capacity(8), arr(new T[_capacity])
     {
-        arr = new T[8];
+       
     }
 
-    Vector(const T &value) : _size(0), _capacity(8)
+    Vector(const T &value) : _size(0), _capacity(8), arr(new T[_capacity])
     {
-        arr = new T[8];
-        for (int iter = 0; iter < 8; iter++)
+        for (int iter = 0; iter < _capacity; iter++)
         {
             arr[iter] = value;
         }
